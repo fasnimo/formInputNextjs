@@ -88,8 +88,10 @@ export default function PageRedirected() {
                 // </form>
                  }
             </div> */}
-            <Footer name={formData.name} email={formData.email} message={formData.message}/>
-            
+            {(formSuccess)?  
+                <Footer name={formData.name} email={formData.email} message={formData.message}/>
+            : <p>Form not submitted</p>}
+
        </div> 
     )
 }
